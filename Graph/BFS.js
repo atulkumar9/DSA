@@ -24,12 +24,12 @@ const makeDefaultArray = (N) => {
   return arr;
 };
 
-const bfsOfGraph = (V, adj) => {
+const bfsOfGraph = (V, adj, startVertex) => {
   let vis = makeDefaultArray(V); // [0, 0, 0, 0, 0] for V = 5
   let queue = [];
   let bfs = [];
-  vis[0] = 1;
-  queue.push(0);
+  vis[startVertex] = 1;
+  queue.push(startVertex);
   while (queue.length !== 0) {
     let visitedNode = queue.shift();
     bfs.push(visitedNode);
@@ -43,7 +43,8 @@ const bfsOfGraph = (V, adj) => {
   return bfs;
 };
 
-const V = 5;
-const Graph = [[1, 2, 3], [], [4], [], []];
+const V = 5; // no of verteces
+const Graph = [[1, 2, 3], [], [4], [], []]; // adjecency list
+const startVertex = 0;
 
-console.log(bfsOfGraph(V, Graph));
+console.log(bfsOfGraph(V, Graph, startVertex));

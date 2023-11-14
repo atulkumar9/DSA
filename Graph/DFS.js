@@ -41,8 +41,8 @@ const dfsOfGraph = (V, adj) => {
   return dfsRes;
 };
 
-const GRAPH = [[2, 3, 1], [0], [0, 4], [0], [2]];
+const GRAPH = [[2, 3, 1], [0], [0, 4], [0], [2]]; // adjecency list
 
-const V = 5;
+const V = 5; // number of vertecies / nodes
 
 console.log(dfsOfGraph(V, GRAPH));
