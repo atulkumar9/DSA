@@ -1,6 +1,13 @@
 // Note- https://takeuforward.org/data-structure/topological-sort-algorithm-dfs-g-21/
 // Question - https://practice.geeksforgeeks.org/problems/topological-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=topological-sort
 
+/**
+ * Topological sorting - 
+  linear ordering of vertices such that if there is an edge between u & V, 
+  u appears before v in the ordering,
+  this works on the DAG (DIrected acyclic graph)
+ */
+
 // Intution - Use Stack to store the node after visiting it and traversing it's children
 // so the child node will be on bottom relative to it's parent always.
 // now you can pop the stack / or reverse the array to get the topological sorted array
