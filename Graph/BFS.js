@@ -16,16 +16,8 @@
  * @returns {number[]}
  */
 
-const makeDefaultArray = (N) => {
-  let arr = [];
-  for (let i = 0; i < N; i++) {
-    arr.push(0);
-  }
-  return arr;
-};
-
 const bfsOfGraph = (V, adj, startVertex) => {
-  let vis = makeDefaultArray(V); // [0, 0, 0, 0, 0] for V = 5
+  let vis = new Array(V).fill(0); // [0, 0, 0, 0, 0] for V = 5
   let queue = [];
   let bfs = [];
   vis[startVertex] = 1;
@@ -43,7 +35,7 @@ const bfsOfGraph = (V, adj, startVertex) => {
   return bfs;
 };
 
-const V = 5; // no of verteces
+const V = 5; // no of vertices
 const Graph = [[1, 2, 3], [], [4], [], []]; // adjecency list
 const startVertex = 0;
 
