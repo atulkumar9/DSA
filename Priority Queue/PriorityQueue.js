@@ -126,3 +126,9 @@ console.log(pq.dequeue());
 console.log(pq.dequeue());
 
 console.log(pq.printHeap());
+
+/**
+ * Time Complexity-
+ * Insertion (enque) - O(logN)
+ * Removal (deque) - O(logN)
+ */
